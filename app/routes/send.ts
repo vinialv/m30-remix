@@ -20,7 +20,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   );
   const { data, error } = await resend.emails.send({
     from: "vinicius@viniciusalves.dev",
-    to: ["vini.alv15@hotmail.com"],
+    to: ["muriloalves@m30.arq.br"],
     subject: "Novo formulário enviado",
     react: EmailForm({ registro }),
     attachments,
