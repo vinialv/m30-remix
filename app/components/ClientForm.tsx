@@ -209,7 +209,7 @@ export default function ClientForm() {
               )}
             </div>
             <div>
-              <Label>CEP</Label>
+              <Label>CEP do Projeto</Label>
               <Input {...register("cep")} inputMode="numeric" maxLength={9} />
               {errors.cep?.message && (
                 <span className="text-sm text-red-500 font-medium">
