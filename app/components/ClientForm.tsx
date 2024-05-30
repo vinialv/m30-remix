@@ -9,14 +9,11 @@ import { LoaderCircle } from "lucide-react";
 
 import { FormSchema } from "@/schema";
 
-import { useNavigate } from "react-router-dom";
-
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import InputDropArea from "./InputDropArea";
-import { Resend } from "resend";
 
 type FormProps = z.infer<typeof FormSchema>;
 type AddressProps = {
@@ -35,14 +32,11 @@ export default function ClientForm() {
   const [files, setFiles] = useState<FileWithName[]>([]);
   const [formSuccess, setFormSuccess] = useState<boolean>(false);
 
-  const navigate = useNavigate();
-
   const {
     handleSubmit,
     register,
     watch,
     setValue,
-    reset,
     formState: { errors },
   } = useForm<FormProps>({
     criteriaMode: "all",
@@ -131,12 +125,16 @@ export default function ClientForm() {
           className="p-6 w-full max-w-96 space-y-6"
         >
           <div className="w-full flex justify-center">
-            <img src="M30_Arquitetura.png" width={100} />
+            <img
+              src="M30_Arquitetura.png"
+              width={100}
+              alt={"Imagem da logotipo da empresa M30 Arquitetura"}
+            />
           </div>
           <div className="space-y-4">
             <div>
               <Label>Nome</Label>
-              <Input {...register("nome")} />
+              <Input {...register("nome")} aria-label="Nome" />
               {errors.nome?.message && (
                 <span className="text-sm text-red-500 font-medium">
                   {errors.nome?.message}
@@ -145,7 +143,7 @@ export default function ClientForm() {
             </div>
             <div>
               <Label>E-mail</Label>
-              <Input {...register("email")} type="email" />
+              <Input {...register("email")} type="email" aria-label="E-mail" />
               {errors.email?.message && (
                 <span className="text-sm text-red-500 font-medium">
                   {errors.email?.message}
@@ -154,7 +152,12 @@ export default function ClientForm() {
             </div>
             <div>
               <Label>Telefone</Label>
-              <Input {...register("telefone")} type="tel" maxLength={15} />
+              <Input
+                {...register("telefone")}
+                type="tel"
+                maxLength={15}
+                aria-label="Telefone"
+              />
               {errors.telefone?.message && (
                 <span className="text-sm text-red-500 font-medium">
                   {errors.telefone?.message}
@@ -170,6 +173,7 @@ export default function ClientForm() {
                     type="checkbox"
                     id="ligacao"
                     className="h-4 w-4"
+                    aria-label="Ligação"
                   />
                   <label htmlFor="ligacao">Ligação</label>
                 </div>
@@ -179,6 +183,7 @@ export default function ClientForm() {
                     type="checkbox"
                     id="whatsapp"
                     className="h-4 w-4"
+                    aria-label="WhatsApp"
                   />
                   <label htmlFor="whatsapp">WhatsApp</label>
                 </div>
@@ -188,6 +193,7 @@ export default function ClientForm() {
                     type="checkbox"
                     id="email"
                     className="h-4 w-4 bg-black"
+                    aria-label="E-mail"
                   />
                   <label htmlFor="email" className="text-nowrap">
                     E-mail
@@ -201,6 +207,7 @@ export default function ClientForm() {
                 {...register("objetivoProjeto")}
                 className="h-36"
                 placeholder="Exemplo: Quero fazer o projeto da minha casa para morar, reformar apartamento para alugar, investimento, etc."
+                aria-label="Objetivo do projeto"
               />
               {errors.objetivoProjeto?.message && (
                 <span className="text-sm text-red-500 font-medium">
@@ -210,7 +217,12 @@ export default function ClientForm() {
             </div>
             <div>
               <Label>CEP do Projeto</Label>
-              <Input {...register("cep")} inputMode="numeric" maxLength={9} />
+              <Input
+                {...register("cep")}
+                inputMode="numeric"
+                maxLength={9}
+                aria-label="CEP"
+              />
               {errors.cep?.message && (
                 <span className="text-sm text-red-500 font-medium">
                   {errors.cep?.message}
@@ -219,7 +231,7 @@ export default function ClientForm() {
             </div>
             <div>
               <Label>Logradouro</Label>
-              <Input {...register("logradouro")} />
+              <Input {...register("logradouro")} aria-label="Logradouro" />
               {errors.logradouro?.message && (
                 <span className="text-sm text-red-500 font-medium">
                   {errors.logradouro?.message}
@@ -228,7 +240,7 @@ export default function ClientForm() {
             </div>
             <div>
               <Label>Número</Label>
-              <Input {...register("numero")} />
+              <Input {...register("numero")} aria-label="Número do endereço" />
               {errors.numero?.message && (
                 <span className="text-sm text-red-500 font-medium">
                   {errors.numero?.message}
@@ -237,7 +249,7 @@ export default function ClientForm() {
             </div>
             <div>
               <Label>Bairro</Label>
-              <Input {...register("bairro")} />
+              <Input {...register("bairro")} aria-label="Bairro" />
               {errors.bairro?.message && (
                 <span className="text-sm text-red-500 font-medium">
                   {errors.bairro?.message}
@@ -246,11 +258,11 @@ export default function ClientForm() {
             </div>
             <div>
               <Label>Complemento</Label>
-              <Input {...register("complemento")} />
+              <Input {...register("complemento")} aria-label="Complemento" />
             </div>
             <div>
               <Label>Cidade</Label>
-              <Input {...register("cidade")} />
+              <Input {...register("cidade")} aria-label="Cidade" />
               {errors.cidade?.message && (
                 <span className="text-sm text-red-500 font-medium">
                   {errors.cidade?.message}
@@ -259,7 +271,7 @@ export default function ClientForm() {
             </div>
             <div>
               <Label>Estado</Label>
-              <Input {...register("estado")} />
+              <Input {...register("estado")} aria-label="Estado" />
               {errors.estado?.message && (
                 <span className="text-sm text-red-500 font-medium">
                   {errors.estado?.message}
@@ -276,6 +288,7 @@ export default function ClientForm() {
         <div className="flex h-dvh w-full justify-center items-center">
           <img
             src="M30_Arquitetura.png"
+            alt={"Imagem da logotipo da empresa M30 Arquitetura"}
             width={150}
             className="absolute top-8"
           />

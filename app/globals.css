@@ -71,9 +71,11 @@
 @layer base {
   * {
     @apply border-border;
+    scrollbar-width: thin;
+    scrollbar-color: #18181b #fff;
   }
+
   body {
-    @apply bg-background text-foreground;
-    font-family: "Mukta";
+    @apply bg-background text-foreground font-mukta;
   }
 }
