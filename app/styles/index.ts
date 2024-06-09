@@ -52,8 +52,8 @@ export const Home = styled.section<HomeProps>`
   }
 
   header svg path {
-    animation: ${changeLogoColor} 0.15s linear 0.5s forwards;
-    -webkit-animation: ${changeLogoColor} 0.15s linear 0.5s forwards;
+    animation: ${changeLogoColor} 0.25s linear 0.55s forwards;
+    -webkit-animation: ${changeLogoColor} 0.25s linear 0.55s forwards;
   }
 
   main {

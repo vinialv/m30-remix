@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { StyleSheetManager } from "styled-components";
 import { WhatsappLogo, InstagramLogo, EnvelopeSimple } from "phosphor-react";
 
@@ -9,7 +9,7 @@ import { LogoAnimation } from "@/components/LogoAnimation";
 export default function Index() {
   const [splashScreen, setSplashScreen] = useState(true);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const timeoutIdInicial = setTimeout(() => {
       setSplashScreen(false);
     }, 4000);
