@@ -19,9 +19,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="title" content="M30 Arquitetura" />
         <meta
           name="description"
-          content="A M30 é um escritório de arquitetura, que busca alinhar tecnologia e 
-    design, com uma entrega autêntica e atemporal para seus clientes. Baseando-se na arquitetura moderna brasileira, mas com o uso de novas
-    tecnologias e materiais."
+          content="A M30 é um escritório de arquitetura, que busca alinhar tecnologia e design, com uma entrega autêntica e atemporal para seus clientes. Baseando-se na arquitetura moderna brasileira, mas com o uso de novas tecnologias e materiais."
         />
         <Meta />
         <Links />
