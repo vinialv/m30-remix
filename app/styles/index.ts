@@ -46,9 +46,9 @@ export const Home = styled.section<HomeProps>`
     top: calc(50% - 40.945px);
     right: calc(50% - 85.055px);
     animation: ${showContent} 0s linear 0s forwards,
-      ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 0.35s forwards;
+      ${moveUpLogo} 0.9s cubic-bezier(0.77, 0, 0.175, 1) 0.45s forwards;
     -webkit-animation: ${showContent} 0s linear 0s forwards,
-      ${moveUpLogo} 1s cubic-bezier(0.77, 0, 0.175, 1) 0.35s forwards;
+      ${moveUpLogo} 0.9s cubic-bezier(0.77, 0, 0.175, 1) 0.45s forwards;
   }
 
   header svg path {

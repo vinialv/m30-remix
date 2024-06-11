@@ -20,6 +20,6 @@ export const Container = styled.div`
   width: calc(3 * ${elementHeight});
   height: calc(3 * ${elementHeight});
   grid-template-columns: repeat(3, 1fr);
-  animation: ${showContainer} 0.35s linear 1.25s forwards;
-  -webkit-animation: ${showContainer} 0.35s linear 1.25s forwards;
+  animation: ${showContainer} 1s linear 1.25s forwards;
+  -webkit-animation: ${showContainer} 1s linear 1.25s forwards;
 `;

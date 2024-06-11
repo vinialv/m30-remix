@@ -23,7 +23,7 @@ export function LogoAnimation() {
   useEffect(() => {
     const changeM_Color = setTimeout(() => {
       setLogoColor(true);
-    }, 3250);
+    }, 3240);
 
     return () => {
       clearTimeout(changeM_Color);
