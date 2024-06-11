@@ -32,6 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           rel="stylesheet"
         />
         <link rel="canonical" href="https://www.m30.arq.br" />
+        <link rel="icon" type="ico" href="favicon.ico" />
       </head>
       <body>
         {children}
