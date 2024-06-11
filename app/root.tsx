@@ -32,7 +32,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
           rel="stylesheet"
         />
         <link rel="canonical" href="https://www.m30.arq.br" />
-        <link rel="icon" type="ico" href="favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon16.png" />
       </head>
       <body>
         {children}
