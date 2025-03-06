@@ -64,7 +64,7 @@ export default function Index() {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <a
-                        href="https://wa.me/5516982149970"
+                        href="https://wa.me/5511943283005"
                         target="_blank"
                         aria-label="Link para WhatsApp"
                       >
